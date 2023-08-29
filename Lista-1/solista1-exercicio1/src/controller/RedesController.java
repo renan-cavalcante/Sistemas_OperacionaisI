@@ -57,7 +57,7 @@ public class RedesController {
 			ip = builder.toString();
 			
 		}else {
-			System.out.println("erro");
+			System.out.println("O sistema não foi reconhecido");
 		}
 		
 		
@@ -108,9 +108,10 @@ public class RedesController {
 		try {
 			return Runtime.getRuntime().exec(process);
 		} catch (Exception e) {
-			return null;
+			System.err.println(e.getMessage());
 		}
 		
+		return null;	
 	}
 	
 	private List<String> readProcess(String process) {

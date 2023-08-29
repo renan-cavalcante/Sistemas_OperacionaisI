@@ -16,7 +16,7 @@ public class ControllerPrint {
 	
 	public void tempoVetor(int[] vetor) {
 		double tempoInicial = System.nanoTime();
-		for(int i : vetor) {
+		for(@SuppressWarnings("unused") int i : vetor) {
 		}
 		double tempoFinal = System.nanoTime();
 		double var = (tempoFinal - tempoInicial)/Math.pow(10,9) ;

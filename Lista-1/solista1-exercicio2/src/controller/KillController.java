@@ -96,8 +96,10 @@ public class KillController implements ActionListener {
 		try {
 			return Runtime.getRuntime().exec(process);
 		} catch (Exception e) {
-			return null;
+			System.err.println(e.getMessage());
 		}
+		
+		return null;	
 
 	}
 
