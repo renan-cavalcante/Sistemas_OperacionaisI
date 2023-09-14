@@ -11,9 +11,14 @@ public class PingController extends Thread {
 	
 	@Override
 	public void run() {
-		ping("google");
-		ping("uol");
-		ping("terra");
+		if((System.getProperty("os.name").toLowerCase().contains("linux"))) {
+			ping("google");
+			ping("uol");
+			ping("terra");
+		}else {
+			System.out.println("Esse sistema não é Linux");
+		}
+		
 	}
 
 	
